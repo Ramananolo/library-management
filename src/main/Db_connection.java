@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnectionManager {
-    private String JDBC_URL;
-    private String DB_USER;
-    private String DB_PASSWORD;
+    private String url;
+    private String user;
+    private String password;
 
 
     public DatabaseConnectionManager() {
