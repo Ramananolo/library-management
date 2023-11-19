@@ -1,0 +1,97 @@
+package entiter;
+import java.util.Objects;
+
+public class book {
+    private String id;
+    private String name;
+    private int pageNumber;
+    private Date releaseDate;
+    private int idAuthor;
+    private Topic topic;
+    private String status;
+
+    public tst(String id, String name, int pageNumber, Date releaseDate, int idAuthor, Topic topic, String status) {
+        this.id = id;
+        this.name = name;
+        this.pageNumber = pageNumber;
+        this.releaseDate = releaseDate;
+        this.idAuthor = idAuthor;
+        this.topic = topic;
+        this.status = status;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPageNumber() {
+        return pageNumber;
+    }
+
+    public void setPageNumber(int pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    public int getIdAuthor() {
+        return idAuthor;
+    }
+
+    public void setIdAuthor(int idAuthor) {
+        this.idAuthor = idAuthor;
+    }
+
+    public Topic getTopic() {
+        return topic;
+    }
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "tst{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", pageNumber=" + pageNumber +
+                ", releaseDate=" + releaseDate +
+                ", idAuthor=" + idAuthor +
+                ", topic=" + topic +
+                ", status='" + status + '\'' +
+                '}';
+    }
+
+    public enum Topic{
+        Comedy,
+        Romance,
+        Other
+    }
+}
