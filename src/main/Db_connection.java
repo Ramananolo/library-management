@@ -17,5 +17,21 @@ public class DatabaseConnectionManager {
     }
 
 
+    public Connection getConnection() {
+        if (this.url != null && this.user != null && this.password != null) {
+            try {
+                Connection connection = DriverManager.getConnection(this.url, this.user, this.password);
+                if (connection != null && connection.isValid(2)) {
+                    System.out.println("Connected successfully");
+                    return connection;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("error");
+        }
 
+        return null;
+    }
 }
